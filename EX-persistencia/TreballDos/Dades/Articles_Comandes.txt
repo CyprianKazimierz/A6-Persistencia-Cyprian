@@ -1,0 +1,6 @@
+Comanda1.102. . . 
+art1.Patates.4.10.40
+art1.Patates.6.10.60
+art3.Pebrot.1.2.2
+Comanda2.30. . . 
+art1.Patates.3.10.30

@@ -1,0 +1,5 @@
+art1.Patates.quantitat.10(preu).quantitat*preu
+art2.Tomaquet.quantitat.3(preu).quantitat*preu
+art3.Pebrot.quantitat.2(preu).quantitat*preu
+art4.Pera.quantitat.5(preu).quantitat*preu
+art5.pa.quantitat.1(preu).quantitat*preu
