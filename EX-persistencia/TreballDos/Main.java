@@ -213,7 +213,7 @@ public class Main{
         System.out.println("Comanda que vols modificar la dada: ");
         comanda = input.next();
         System.out.println("Article a modificar: ");
-        articleModificar = input.next(); // Pedir el artículo antes del bucle
+        articleModificar = input.next(); 
         boolean comandaTrobada = false;
         boolean articleModificat = false;
         for (int i = 0; i < guardarLinies.size(); i++) {
@@ -223,11 +223,9 @@ public class Main{
 				comandaGuardar=comanda;
                 continue;
             }
-            // Si encontramos una nueva comanda y ya estamos en la sección correcta, salir del bucle
             if (comandaTrobada && liniaActual.startsWith("Comanda")) {
                 break;
             }
-            // Buscar el artículo dentro de la comanda encontrada
             if (comandaTrobada && liniaActual.startsWith(articleModificar)) {
                 System.out.println("Nou Codi: ");
                 codi = input.next();
@@ -238,7 +236,7 @@ public class Main{
                 System.out.println("Nou Preu: ");
                 preu = input.nextInt();
                 preuQuantitat = quantitat * preu;
-                // Actualizar la línea con los nuevos datos
+                
                 guardarLinies.set(i, codi + "." + article + "." + quantitat + "." + preu + "." + preuQuantitat);
                 articleModificat = true;
                 break;
@@ -254,7 +252,6 @@ public class Main{
         if (!articleModificat) {
             System.out.println("Article no trobat a la comanda.");
         }
-        // Escribir el archivo actualizado
         FileWriter escriure = new FileWriter(arxiuComadaArticle);
         for (String linies : guardarLinies) {
             escriure.write(linies + System.lineSeparator());
